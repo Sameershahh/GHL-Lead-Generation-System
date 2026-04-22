@@ -32,12 +32,21 @@ Traditional lead handling is slow, inconsistent, and heavily manual. Common fail
 
 ---
 
+## Demo
+
+
+> **Walkthrough Form:** [Form](https://api.leadconnectorhq.com/widget/form/JJva1d9L07FOOPQEvzsH?notrack=true)
+
+Covers:
+- Live form submission
+- Workflow execution in GHL
+- Email receipt confirmation
+- Pipeline card movement (Cold → Hot)
+
+---
+
 ## Solution Architecture
 
-<!-- ==========================================================
-     SCREENSHOT: Paste workflow-diagram.svg / PNG export here
-     Recommended export: 2x resolution, transparent or dark bg
-     ========================================================== -->
 
 <div align="center">
 
@@ -68,7 +77,8 @@ The user fills out a dynamic capture form embedded on a landing page or funnel. 
      SCREENSHOT: GHL form builder / embedded form UI
      ========================================================== -->
 
-![Form Interface](./assets/screenshots/01-form.png)
+<img width="1918" height="842" alt="image" src="https://github.com/user-attachments/assets/db17396f-69bc-414d-a79f-119e32d7bd1d" />
+
 
 ---
 
@@ -80,7 +90,8 @@ Form submission fires a GHL workflow trigger. The workflow picks up the payload 
      SCREENSHOT: GHL Workflow canvas showing trigger node
      ========================================================== -->
 
-![Workflow Trigger](./assets/screenshots/02-workflow-trigger.png)
+<img width="1778" height="561" alt="image" src="https://github.com/user-attachments/assets/be2158d5-f3ab-43bf-96f3-24f1916490d0" />
+
 
 ---
 
@@ -93,11 +104,6 @@ Rule-based conditions evaluate the lead's intent using keyword signals and field
 | Keywords: "buy", "price", "interested", "service" | HOT Lead | Priority pipeline + immediate email |
 | No strong intent signal | COLD Lead | Nurture sequence + tag assignment |
 
-<!-- ==========================================================
-     SCREENSHOT: GHL condition branch node / if-else logic view
-     ========================================================== -->
-
-![Condition Logic](./assets/screenshots/03-condition.png)
 
 ---
 
@@ -107,11 +113,6 @@ Based on classification, the lead is:
 - Tagged (`hot_lead` / `cold_lead`) for segmentation
 - Moved to the corresponding pipeline stage in GHL CRM
 
-<!-- ==========================================================
-     SCREENSHOT: GHL pipeline view showing lead card placement
-     ========================================================== -->
-
-![Pipeline Routing](./assets/screenshots/04-pipeline.png)
 
 ---
 
@@ -119,11 +120,9 @@ Based on classification, the lead is:
 
 A personalized email is dispatched immediately based on lead type. Templates are dynamically populated with the lead's submitted data (name, service interest, etc.).
 
-<!-- ==========================================================
-     SCREENSHOT: GHL email template editor + sent email preview
-     ========================================================== -->
 
-![Email Response](./assets/screenshots/05-email.png)
+<img width="1913" height="860" alt="image" src="https://github.com/user-attachments/assets/10ac13b8-c0e2-4c10-b20d-60e156016f2a" />
+
 
 ---
 
@@ -133,28 +132,8 @@ Time-delayed follow-up sequences are triggered automatically:
 - HOT leads: follow-up at 24h, 48h
 - COLD leads: re-engagement drip over 7 days
 
-<!-- ==========================================================
-     SCREENSHOT: GHL workflow showing wait/delay + follow-up nodes
-     ========================================================== -->
-
-![Follow-Up Sequence](./assets/screenshots/06-followup.png)
-
 ---
 
-## Full Pipeline View
-
-<!-- ==========================================================
-     SCREENSHOT: GHL CRM pipeline board — all stages visible
-     ========================================================== -->
-
-<div align="center">
-
-![CRM Pipeline](./assets/screenshots/pipeline-board.png)
-*Multi-stage CRM pipeline tracking leads from capture to close*
-
-</div>
-
----
 
 ## Tech Stack
 
@@ -191,22 +170,7 @@ ghl-lead-automation/
 
 ---
 
-## Demo
 
-<!-- ==========================================================
-     VIDEO: Embed Loom link below
-     Suggested walkthrough: form submission → email received → pipeline movement
-     ========================================================== -->
-
-> **Walkthrough Video:** [Watch on Loom](https://loom.com/your-link-here)
-
-Covers:
-- Live form submission
-- Workflow execution in GHL
-- Email receipt confirmation
-- Pipeline card movement (Cold → Hot)
-
----
 
 ## Business Impact
 
@@ -230,7 +194,7 @@ Covers:
 
 ## Roadmap
 
-- [ ] Integrate AI-based lead scoring via OpenAI API
+- [ ] Integrate AI-based lead scoring via OpenAI/Gemini API
 - [ ] Add WhatsApp / SMS automation using GHL + Twilio
 - [ ] Build a custom analytics dashboard (pipeline velocity, conversion rate)
 - [ ] Chatbot-based lead capture on landing page
@@ -241,4 +205,4 @@ Covers:
 
 **Sameer Shah** — AI Automation Engineer & Full-Stack Developer
 
-[GitHub](https://github.com/Sameershahh) · [LinkedIn](https://linkedin.com/in/your-handle)
+[GitHub](https://github.com/Sameershahh) · [LinkedIn](https://www.linkedin.com/in/sameershah-dev/)
