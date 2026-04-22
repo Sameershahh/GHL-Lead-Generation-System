@@ -50,7 +50,7 @@ Covers:
 
 <div align="center">
 
-![System Architecture](./assets/workflow-diagram.png)
+![System Architecture](architecture.png)
 *Full pipeline — from lead submission to pipeline tracking*
 
 </div>
@@ -153,18 +153,11 @@ Time-delayed follow-up sequences are triggered automatically:
 ```
 ghl-lead-automation/
 ├── assets/
-│   ├── workflow-diagram.png        # Architecture diagram
+│   ├── architecture.png        # Architecture diagram
 │   └── screenshots/
 │       ├── 01-form.png
-│       ├── 02-workflow-trigger.png
-│       ├── 03-condition.png
-│       ├── 04-pipeline.png
-│       ├── 05-email.png
-│       ├── 06-followup.png
-│       └── pipeline-board.png
-├── docs/
-│   ├── workflow-logic.md           # Detailed logic documentation
-│   └── setup-guide.md             # GHL configuration steps
+│       ├── 02-workflow.png
+│       ├── 03-email.png            # GHL configuration steps
 └── README.md
 ```
 
